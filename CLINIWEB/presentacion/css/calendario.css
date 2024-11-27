@@ -1,0 +1,188 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', Algerian, sans-serif;
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4); /* Degradado en tonos más suaves de azul */
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+/* Contenedor principal del calendario */
+.calendar-wrapper {
+    max-width: 1500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #1b3c48, #243b4a);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), inset 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Controles para cambiar meses y años */
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-controls button {
+    background: #1dd3d3;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-controls button:hover {
+    background: #12b0b0;
+    transform: scale(1.05);
+}
+
+.calendar-controls button:active {
+    transform: scale(0.95);
+}
+
+/* Encabezado del calendario */
+.calendar-container h1 {
+    font-size: 2.2rem;
+    color: #1dd3d3;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Diseño de la cuadrícula del calendario */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezados de los días de la semana */
+.day-header {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    background: #284b63;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Días del mes */
+.day {
+    min-height: 120px;
+    background: linear-gradient(145deg, #1a3d5a, #233c50);
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    text-align: left;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Días vacíos */
+.day.empty {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Número del día */
+.date-number {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #1dd3d3;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Citas dentro de los días */
+.event {
+    background: #1dd3d3;
+    color: #ffffff;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.event:hover {
+    background: #12b0b0;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .calendar-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .day {
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .calendar-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .day {
+        min-height: 90px;
+    }
+
+    .date-number {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calendar-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .calendar-controls button {
+        width: 100%;
+    }
+
+    .day {
+        min-height: 80px;
+    }
+
+    .date-number {
+        font-size: 1.3rem;
+    }
+}

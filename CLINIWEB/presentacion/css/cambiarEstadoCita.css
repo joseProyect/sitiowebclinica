@@ -1,0 +1,119 @@
+/* Fondo y fuentes generales */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4); /* Azul turquesa suave de fondo */
+    color: #00796b; /* Azul oscuro para el texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del encabezado */
+h1 {
+    text-align: center;
+    color: #00695c; /* Un azul más oscuro para resaltar el título */
+    font-size: 2em;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #b2dfdb; /* Azul turquesa más fuerte para el formulario */
+    border: 2px solid #00796b; /* Bordes más oscuros */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de las etiquetas y campos del formulario */
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #00796b;
+}
+
+button {
+    background-color: #00796b; /* Azul oscuro */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40; /* Un verde más oscuro para el hover */
+}
+
+/* Estilo del enlace */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #004d40; /* Cambia el color al pasar el cursor sobre el enlace */
+}
+
+/* Estilo para el contenedor de las citas */
+.container {
+    padding: 20px;
+}
+
+.cita-card {
+    background-color: #ffffff;
+    border: 2px solid #00796b;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cita-card h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.cita-card p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.selected {
+    background-color: #00796b; /* Resaltar la tarjeta seleccionada */
+    color: white;
+}
+
+.selected .estado-cita {
+    font-weight: bold;
+}
+
+/* Estilo de los botones */
+button:disabled {
+    background-color: #b2dfdb;
+    cursor: not-allowed;
+}

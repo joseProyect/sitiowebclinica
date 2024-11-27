@@ -1,0 +1,158 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Fuente retro */
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4); /* Fondo azul oscuro */
+    color: #00ffcc; /* Verde neón */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #00264d; /* Fondo azul oscuro más claro */
+    padding: 20px;
+    border: 2px solid #00bcd4; /* Borde azul turquesa */
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8); /* Brillo neón */
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    color: #00ffcc; /* Verde neón */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00bcd4;
+}
+
+/* Tabla de horarios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #00bcd4; /* Azul turquesa */
+    color: #00ffcc; /* Verde neón */
+    font-size: 14px;
+}
+
+/* Encabezados de la tabla */
+th {
+    background-color: #003366; /* Azul más oscuro */
+    color: #00ffcc; /* Verde neón */
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00bcd4;
+}
+
+/* Celdas disponibles (ocupadas por el doctor) */
+.disponible {
+    background-color: #00bcd4; /* Azul turquesa */
+    color: #003366; /* Azul oscuro */
+    font-weight: bold;
+    text-shadow: none;
+}
+
+/* Celdas no disponibles */
+.vacio {
+    background-color: #00264d; /* Azul oscuro */
+    color: #00bcd4; /* Azul turquesa más claro */
+    text-shadow: none;
+}
+
+/* Bloque de descanso */
+.descanso {
+    background-color: #001f3f; /* Azul muy oscuro */
+    color: #00ffcc; /* Verde neón */
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00bcd4;
+}
+
+/* Botón Volver */
+.volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #00bcd4; /* Azul turquesa */
+    color: #003366; /* Azul oscuro */
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #00ffcc; /* Verde neón */
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+    transition: all 0.3s ease;
+}
+
+.volver:hover {
+    background-color: #00ffcc; /* Verde neón */
+    color: #001f3f; /* Azul oscuro */
+    box-shadow: 0 0 20px rgba(0, 255, 204, 1);
+}
+
+.volver:active {
+    transform: scale(0.95);
+}
+
+/* Adaptación a dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px; /* Ajuste del título */
+    }
+
+    table {
+        font-size: 14px; /* Tamaño más pequeño en móviles */
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .volver {
+        font-size: 14px;
+        padding: 10px 20px; /* Botón más pequeño */
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px; /* Más ancho en pantallas grandes */
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    table {
+        font-size: 18px;
+    }
+
+    th, td {
+        padding: 14px;
+    }
+}

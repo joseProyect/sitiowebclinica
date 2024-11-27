@@ -1,0 +1,180 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4); /* Fondo gradiente turquesa */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    color: #00796b; /* Azul oscuro turquesa */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #004d40;
+    margin-bottom: 5px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #80deea; /* Azul turquesa */
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Campo de fecha (calendario) */
+input[type="date"] {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #80deea; /* Borde turquesa */
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="date"]:focus {
+    background-color: #e0f7fa;
+    border-color: #00796b; /* Borde más oscuro al enfocar */
+    outline: none;
+}
+
+/* Campo de selección (selector de hora) */
+select {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #80deea; /* Borde turquesa */
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+select:focus {
+    background-color: #e0f7fa;
+    border-color: #00796b;
+    outline: none;
+}
+
+/* Estilo para las opciones del selector */
+select option {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px;
+}
+
+select option:hover {
+    background-color: #80deea; /* Azul claro en hover */
+    color: #ffffff;
+}
+
+/* Textarea */
+textarea {
+    min-height: 100px;
+    resize: none;
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #80deea;
+    font-size: 1rem;
+}
+
+textarea:focus {
+    background-color: #e0f7fa;
+    border-color: #00796b;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.registrar {
+    background-color: #00796b; /* Azul oscuro */
+}
+
+.btn.registrar:hover {
+    background-color: #004d40; /* Azul más oscuro */
+    transform: scale(1.05);
+}
+
+.btn.regresar {
+    background-color: #00796b; /* Azul oscuro */
+}
+
+.btn.regresar:hover {
+    background-color: #004d40; /* Azul más oscuro */
+    transform: scale(1.05);
+}
+
+/* Mensajes de advertencia */
+.no-disponible {
+    background-color: #ffebee; /* Fondo rojo claro */
+    color: #d32f2f; /* Texto rojo oscuro */
+    border: 1px solid #ef9a9a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Acciones */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

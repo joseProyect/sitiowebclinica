@@ -1,0 +1,157 @@
+/* General Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4); /* Suave azul claro */
+    color: #333; /* Texto principal en gris oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado Principal */
+h1 {
+    text-align: center;
+    color: #008b8b; /* Azul turquesa oscuro */
+    margin: 20px 10px;
+    font-size: 24px;
+}
+
+/* Botones Generales */
+button {
+    background-color: #40e0d0; /* Turquesa */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #20b2aa; /* Turquesa más oscuro */
+}
+
+/* Botón Agregar Doctor */
+button:first-of-type {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Tabla */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden;
+}
+
+thead {
+    background-color: #008b8b; /* Azul turquesa oscuro */
+    color: white;
+}
+
+thead th {
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+    border-bottom: 2px solid #006666; /* Línea divisoria */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Filas alternas en gris claro */
+}
+
+tbody tr:hover {
+    background-color: #e0ffff; /* Azul pálido al pasar el ratón */
+}
+
+td {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 12px;
+        margin: 5px;
+    }
+
+    button:first-of-type {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    table {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    thead {
+        display: none; /* Oculta el encabezado de la tabla */
+    }
+
+    tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    tbody td::before {
+        content: attr(data-label); /* Muestra el título de la columna */
+        font-weight: bold;
+        color: #008b8b; /* Azul turquesa */
+    }
+
+    tbody td:last-child {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    tbody td {
+        font-size: 12px;
+    }
+
+    tbody td::before {
+        font-size: 12px;
+    }
+}
+

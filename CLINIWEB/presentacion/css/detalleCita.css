@@ -1,0 +1,107 @@
+/* Contenedor de detalles de la cita */
+.detalle-cita-container {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4);
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none; /* Oculto por defecto */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Mostrar el contenedor cuando tiene la clase "active" */
+.detalle-cita-container.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.detalle-cita h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 10px;
+}
+
+.detalle-cita p {
+    margin: 10px 0;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.detalle-cita button {
+    background: #ffffff;
+    color: #1dd3d3;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.detalle-cita button:hover {
+    background: #e6f9f9;
+    transform: scale(1.02);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .detalle-cita-container {
+        top: 5%;
+        right: 5%;
+        width: 90%;
+        max-height: 70%;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .detalle-cita h2 {
+        font-size: 1.3rem;
+    }
+
+    .detalle-cita p {
+        font-size: 0.9rem;
+    }
+
+    .detalle-cita button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detalle-cita-container {
+        top: 2%;
+        right: 2%;
+        width: 90%;
+        max-height: 80%;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .detalle-cita h2 {
+        font-size: 1.2rem;
+    }
+
+    .detalle-cita p {
+        font-size: 0.85rem;
+    }
+
+    .detalle-cita button {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+}

@@ -1,0 +1,200 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 20px;
+    border: 2px solid #40e0d0;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(64, 224, 208, 0.4);
+    overflow: hidden; /* Evita que el contenido se desborde */
+    margin: 10px 0;
+}
+
+/* Cabecera */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.search-bar {
+    flex: 1;
+}
+
+.search-bar form {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #40e0d0;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #40e0d0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+    background-color: #36c2b4;
+    transform: scale(1.05);
+}
+
+/* Botón Agregar Paciente */
+.add-patient-button {
+    padding: 10px 20px;
+    background-color: #40e0d0;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-patient-button:hover {
+    background-color: #36c2b4;
+    transform: scale(1.05);
+}
+
+/* Tabla Responsiva */
+.table-wrapper {
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en dispositivos móviles */
+    border: 1px solid #40e0d0;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed; /* Controla el ancho de las columnas */
+}
+
+table th, table td {
+    border: 1px solid #40e0d0;
+    text-align: center;
+    padding: 12px;
+    white-space: nowrap; /* Evita que el texto se divida */
+    overflow: hidden; /* Oculta contenido que exceda */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el contenido es demasiado largo */
+}
+
+table th {
+    background-color: #40e0d0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f7fcfc;
+}
+
+table tr:hover {
+    background-color: #eafafa;
+}
+
+/* Íconos */
+table td button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+table td button:hover {
+    transform: scale(1.2);
+}
+
+/* Ajustes para Dispositivos Móviles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .add-patient-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        word-wrap: break-word; /* Permite que las palabras largas se ajusten */
+    }
+
+    table th, table td {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header {
+        gap: 15px;
+    }
+
+    table {
+        font-size: 10px;
+    }
+
+    table th, table td {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    .search-bar input {
+        font-size: 12px;
+    }
+
+    .add-patient-button, .search-bar button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

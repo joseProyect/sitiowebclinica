@@ -1,0 +1,167 @@
+/* Estilo general */
+body {
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4);/* Fondo azul claro */
+    font-family: 'Courier New', Courier, monospace; /* Tipografía retro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 700px;
+    background: #ffffff; /* Fondo blanco */
+    border: 2px solid #3bbdbd; /* Azul turquesa oscuro */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 123, 123, 0.3); /* Sombra suave */
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+/* Botón de cerrar (estilo X) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Ubicada en la esquina superior derecha */
+    width: 50px;
+    height: 55px;
+    background-color: #dc2626; /* Fondo transparente */
+    color: #fffff; /* Color rojo */
+    border: 2px solid #000000; /* Borde rojo */
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px; /* Ligero redondeo */
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #ff0000; /* Fondo rojo en hover */
+    color: #ffffff; /* Texto blanco en hover */
+    transform: scale(1.1); /* Aumenta ligeramente en hover */
+}
+
+/* Título del formulario */
+h1 {
+    background-color: #3bbdbd; /* Azul turquesa oscuro */
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    margin: 0;
+    padding: 15px;
+    border-radius: 10px 10px 0 0; /* Bordes superiores redondeados */
+}
+
+/* Estilo del formulario */
+form {
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+}
+
+/* Etiquetas */
+form label {
+    font-weight: bold;
+    color: #2a8d8d;
+    margin-bottom: 5px;
+    grid-column: span 1;
+}
+
+/* Campos de entrada */
+form input, form select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #3bbdbd;
+    border-radius: 4px;
+    background-color: #eaf7f9;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form select:focus {
+    border-color: #2a8d8d;
+    box-shadow: 0 0 8px rgba(59, 189, 189, 0.7);
+}
+
+/* Botones */
+form button {
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón de enviar */
+button[type="submit"] {
+    background-color: #3bbdbd; /* Azul turquesa */
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #2a8d8d; /* Azul más oscuro */
+}
+
+/* Mensajes de error y éxito */
+.error, .success {
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
+    grid-column: span 2;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        max-width: 500px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Cambiar a una sola columna */
+    }
+
+    .close-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+    }
+}

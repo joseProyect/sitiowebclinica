@@ -1,0 +1,126 @@
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Body */
+body {
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4);
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    color: #003366; /* Azul marino */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulario */
+form {
+    background-color: #ffffff;
+    border: 2px solid #003366;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #003366; /* Azul marino */
+}
+
+form select, form input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #003366;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #003366; /* Azul marino */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #002244;
+}
+
+form a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #003366;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+form a:hover {
+    color: #002244;
+}
+
+/* Mensaje de error */
+p {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Estilos móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 20px;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+
+    form a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para dispositivos más pequeños */
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+        width: 95%;
+    }
+
+    form button {
+        font-size: 0.9rem;
+    }
+
+    form a {
+        font-size: 0.8rem;
+    }
+}

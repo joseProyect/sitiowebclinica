@@ -1,0 +1,141 @@
+/* Estilo General */
+body {
+    font-family: "Courier New", Courier, monospace; /* Fuente antigua */
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4); /* Fondo turquesa claro */
+    color: #003d4d; /* Texto azul oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del Login */
+.login-container {
+    width: 360px;
+    padding: 20px;
+    border: 2px solid #006d77; /* Borde azul turquesa oscuro */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 4px 4px 0px #003d4d; /* Sombra estilo antigua */
+    border-radius: 6px; /* Bordes redondeados */
+    text-align: center;
+    transition: all 0.3s ease-in-out; /* Transición para mejorar la interacción */
+}
+
+/* Título */
+h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #006d77; /* Azul turquesa oscuro */
+    font-weight: bold;
+    text-shadow: 1px 1px #ffffff; /* Sombra blanca */
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #005961; /* Azul más oscuro */
+    text-align: left;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 2px solid #006d77; /* Borde azul turquesa */
+    background-color: #f0fcfc; /* Fondo azul muy claro */
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: inset 2px 2px #cde4e5, inset -2px -2px #ffffff; /* Sombras internas estilo antigua */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Foco en Inputs */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #004f58; /* Azul más oscuro al enfocar */
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 109, 119, 0.7); /* Resaltado al enfocar */
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    background-color: #006d77; /* Azul turquesa oscuro */
+    color: #ffffff; /* Texto blanco */
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px; /* Texto mediano */
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 4px 4px 0px #003d4d; /* Sombra estilo antigua */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+/* Hover en Botón */
+button:hover {
+    background-color: #004f58; /* Azul más oscuro al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 6px 6px 0px #003d4d; /* Sombra más pronunciada */
+}
+
+/* Botón Activo */
+button:active {
+    transform: translateY(0); /* Volver al nivel original al hacer clic */
+    box-shadow: 4px 4px 0px #003d4d; /* Regresa a la sombra original */
+}
+
+/* Mensaje de Error */
+.error-message {
+    background-color: #fbe9e9; /* Fondo rojo claro */
+    color: #9b2c2c; /* Rojo oscuro */
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+    box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #ccc; /* Sombras internas */
+    animation: fadeIn 0.3s ease-in-out; /* Animación para mostrar el mensaje */
+}
+
+/* Animación de Aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%; /* Adapta el contenedor al ancho de la pantalla */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px; /* Botón más pequeño en pantallas pequeñas */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 12px; /* Reducir texto en pantallas pequeñas */
+    }
+}

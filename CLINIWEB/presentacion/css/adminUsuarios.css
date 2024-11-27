@@ -1,0 +1,406 @@
+/* Estilo General */
+body {
+    font-family: "Courier New", Courier, monospace; /* Fuente retro */
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4); /* Fondo azul claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #000000; /* Negro retro */
+}
+
+/* Contenedor General */
+.container {
+    width: 90%;
+    max-width: 1500px;
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #40E0D0; /* Azul turquesa */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 6px 6px 0px #7d7d7d; /* Sombra estilo retro */
+    padding: 20px;
+    position: relative; /* Posicionamiento relativo para el botón de cierre */
+    overflow-x: auto; /* Permite desplazamiento horizontal en pantallas pequeñas */
+}
+
+/* Título */
+h1 {
+    font-size: 22px;
+    text-align: center;
+    color: #40E0D0; /* Azul turquesa */
+    margin-bottom: 20px;
+    background-color: #e8f7f9; /* Fondo azul claro */
+    padding: 10px;
+    border: 2px solid #40E0D0; /* Azul turquesa */
+    border-radius: 8px;
+    text-shadow: 1px 1px #ffffff, -1px -1px #40E0D0; /* Sombra retro */
+}
+
+/* Botón Agregar Usuario */
+.add-user-button {
+    background-color: #40E0D0; /* Azul turquesa */
+    color: #ffffff; /* Texto blanco */
+    font-size: 14px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #007f7f; /* Sombra retro */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaciado entre icono y texto */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-user-button:hover {
+    background-color: #007f7f; /* Azul más oscuro al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.add-user-button:active {
+    transform: translateY(0); /* Volver al nivel original al hacer clic */
+}
+
+/* Contenedor del Título y Botón */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Botón de cierre estilo retro */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000; /* Fondo rojo */
+    color: #ffffff; /* Texto blanco */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    border: 2px solid #000000; /* Borde negro */
+    border-radius: 50%; /* Forma circular */
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #000000;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #cc0000; /* Rojo más oscuro al pasar el cursor */
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Fondo blanco */
+    margin-top: 20px;
+    border: 1px solid #40E0D0; /* Azul turquesa */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Encabezado de la tabla */
+thead {
+    background-color: #40E0D0; /* Azul turquesa */
+    color: #ffffff; /* Texto blanco */
+}
+
+th {
+    padding: 12px;
+    font-size: 14px;
+    text-align: left;
+    border-bottom: 2px solid #007f7f; /* Azul más oscuro */
+    text-shadow: 1px 1px #e8f7f9; /* Sombra clara */
+}
+
+/* Filas */
+tr {
+    transition: background-color 0.2s ease;
+}
+
+tr:hover {
+    background-color: #f0ffff; /* Azul claro al pasar el cursor */
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #cccccc; /* Línea inferior gris */
+    font-size: 13px;
+}
+
+/* Iconos para Acciones */
+.actions i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #40E0D0; /* Azul turquesa */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.actions i:hover {
+    transform: scale(1.2); /* Efecto de zoom */
+    color: #007f7f; /* Azul más oscuro */
+}
+
+/* Estados Activo/Inactivo */
+.active {
+    color: green;
+    font-weight: bold;
+}
+
+.inactive {
+    color: red;
+    font-weight: bold;
+}
+
+/* Cuadro de Alerta Retro */
+.alert-container {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    border: 2px solid #40E0D0; /* Azul turquesa */
+    box-shadow: 4px 4px 0px #007f7f; /* Sombra retro */
+    border-radius: 8px;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Caja de Alerta */
+.alert-box {
+    padding: 15px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+    position: relative;
+}
+
+/* Mensaje de Alerta */
+.alert-message {
+    display: inline-block;
+    width: calc(100% - 30px); /* Deja espacio para el botón de cerrar */
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Botón de Cerrar */
+.alert-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000; /* Fondo rojo */
+    color: #ffffff; /* Texto blanco */
+    border: 1px solid #000000; /* Borde negro */
+    border-radius: 50%; /* Forma circular */
+    font-size: 14px;
+    line-height: 18px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 2px 2px 0px #000000; /* Sombra retro */
+}
+
+.alert-close:hover {
+    background-color: #cc0000; /* Rojo más oscuro */
+}
+
+/* Cuadro de Confirmación Retro */
+.confirm-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Caja de Confirmación */
+.confirm-box {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #40E0D0; /* Azul turquesa */
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 4px 4px 0px #007f7f; /* Sombra retro */
+}
+
+/* Mensaje de Confirmación */
+.confirm-message {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Botones del Cuadro de Confirmación */
+.confirm-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.confirm-button {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    padding: 10px 15px;
+    background-color: #40E0D0; /* Azul turquesa */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #007f7f; /* Sombra retro */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.confirm-button:hover {
+    background-color: #007f7f; /* Azul más oscuro */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.confirm-button:active {
+    transform: translateY(0); /* Volver al nivel original al hacer clic */
+}
+
+.confirm-button.cancel {
+    background-color: #ff0000; /* Rojo */
+    box-shadow: 2px 2px 0px #cc0000; /* Sombra retro */
+}
+
+.confirm-button.cancel:hover {
+    background-color: #cc0000; /* Rojo más oscuro */
+    transform: translateY(-2px);
+}
+
+/* Cuadro de Mensaje Personalizado */
+.message-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Caja del Mensaje */
+.message-box {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #40E0D0; /* Azul turquesa */
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 4px 4px 0px #007f7f; /* Sombra retro */
+}
+
+/* Contenido del Mensaje */
+.message-content {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Botón del Mensaje */
+.message-button {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    padding: 10px 15px;
+    background-color: #40E0D0; /* Azul turquesa */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #007f7f; /* Sombra retro */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.message-button:hover {
+    background-color: #007f7f; /* Azul más oscuro */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.message-button:active {
+    transform: translateY(0); /* Volver al nivel original al hacer clic */
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+        box-shadow: 2px 2px 0px #000000;
+    }
+
+    table {
+        font-size: 12px; /* Reduce el tamaño del texto en la tabla */
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    i {
+        font-size: 14px; /* Reduce el tamaño de los iconos */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none; /* Ocultar encabezados */
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #40E0D0; /* Azul turquesa */
+        border-radius: 4px;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para tarjetas */
+    }
+
+    td {
+        display: block;
+        text-align: right;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    td:before {
+        content: attr(data-label); /* Mostrar encabezado como etiqueta */
+        float: left;
+        font-weight: bold;
+        color: #007f7f; /* Azul más oscuro */
+    }
+}

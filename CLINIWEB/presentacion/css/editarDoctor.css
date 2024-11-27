@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #b0e0e6, #4682b4); /* Azul claro suave */
+    color: #333; /* Gris oscuro para texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: #008b8b; /* Azul turquesa oscuro */
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Contenedor del formulario */
+form {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Etiquetas del formulario */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Campos de entrada */
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #008b8b; /* Resalta con turquesa */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 139, 139, 0.5);
+}
+
+/* Botones */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #40e0d0; /* Turquesa */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #20b2aa; /* Turquesa más oscuro */
+}
+
+button[type="button"] {
+    background-color: #ff6f61; /* Rojo suave para cancelar */
+}
+
+button[type="button"]:hover {
+    background-color: #e63946; /* Rojo más oscuro */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    form {
+        width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"], select {
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input[type="text"], select {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+}

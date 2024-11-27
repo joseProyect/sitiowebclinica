@@ -1,0 +1,139 @@
+/* General styles */
+body {
+  font-family: 'Courier New', Courier, monospace; /* Fuente estilo retro */
+  background: linear-gradient(to bottom, #b0e0e6, #4682b4); /* Degradado en tonos más suaves de azul */
+  color: #fff; /* Texto blanco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Estilo para el título */
+.title-container {
+  width: 100%;
+  overflow: hidden; /* Esconde lo que sobrepasa el área visible */
+  text-align: center;
+  margin-bottom: 30px; /* Espacio entre el título y las tarjetas */
+}
+
+.title {
+  font-size: 120px; /* Tamaño grande */
+  font-weight: bold;
+  color: #00b4d8; /* Azul brillante */
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 255, 255, 0.3); /* Efecto retro con sombra más intensa */
+  display: inline-block;
+  animation: marquee 10s linear infinite; /* Animación de desplazamiento */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Comienza fuera de la pantalla a la derecha */
+  }
+  100% {
+    transform: translateX(-100%); /* Termina fuera de la pantalla a la izquierda */
+  }
+}
+
+/* Estilos para las tarjetas */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(2, 1fr); /* 2 filas */
+  gap: 20px; /* Espacio entre tarjetas */
+  width: 80%; /* Ajuste del ancho de la container */
+  max-width: 1000px; /* Máximo ancho para evitar que se expandan demasiado */
+  margin: 0 auto; /* Centramos la grid */
+}
+
+.card {
+  background: linear-gradient(90deg, #003f5c, #002a3e); /* Degradado azul oscuro */
+  border-radius: 15px; /* Bordes más redondeados para un estilo vintage */
+  padding: 5px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Sombra más fuerte para el estilo retro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 300px; /* Un poco más baja para un estilo más compacto */
+  width: 100%; /* Asegura que todas las tarjetas tengan el mismo ancho */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9); /* Sombra más fuerte al pasar el mouse */
+}
+
+.number {
+  font-size: 100px; /* Tamaño grande de los números */
+  font-weight: bold;
+  color: #f1f1f1; /* Blanco para el número */
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.3); /* Sombra más intensa */
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f1f1f1; /* Blanco para los títulos */
+  margin-top: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra sutil en los encabezados */
+}
+
+/* Estilos para los botones */
+.card-btn {
+  background-color: #005f73; /* Azul marino oscuro */
+  border: 1px solid #fff; /* Borde blanco */
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card-btn:hover {
+  background-color: #008b93; /* Color más claro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto al hacer hover */
+}
+
+.card-btn a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff; /* Color blanco para el enlace */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+.card-btn i {
+  margin-right: 8px;
+  font-size: 20px; /* Tamaño del icono */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* En pantallas pequeñas, las tarjetas se organizan en una sola columna */
+  }
+
+  .card {
+    max-width: 100%; /* Asegura que las tarjetas usen el 100% del espacio disponible */
+    height: auto; /* Hace que la altura sea automática para no estar tan restringida */
+    padding: 20px; /* Reduce un poco el padding en pantallas pequeñas */
+  }
+
+  .number {
+    font-size: 80px; /* Reducimos un poco el tamaño de los números en pantallas pequeñas */
+  }
+
+  .title {
+    font-size: 60px; /* Reducimos el tamaño del título en pantallas pequeñas */
+  }
+}
